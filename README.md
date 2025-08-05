@@ -1,10 +1,10 @@
-# EduBuddy
+# EduBuddyAi
 
 **A Local LLM-Powered AI Tutor for Children**
 
 ## Description
 
-EduBuddy is an innovative educational platform designed to provide personalized learning experiences for children. Leveraging the power of local Large Language Models (LLMs), EduBuddy acts as an AI tutor, making learning accessible and engaging from anywhere. This project aims to democratize education by offering an intelligent, interactive, and private learning environment without relying on cloud-based AI services.
+EduBuddyAi is an innovative educational platform designed to provide personalized learning experiences for children. Leveraging the power of local Large Language Models (LLMs), EduBuddyAi acts as an AI tutor, making learning accessible and engaging from anywhere. This project aims to democratize education by offering an intelligent, interactive, and private learning environment without relying on cloud-based AI services.
 
 ## Features
 
@@ -23,7 +23,7 @@ EduBuddy is an innovative educational platform designed to provide personalized 
 
 ## Setup and Installation
 
-To get EduBuddy up and running on your local machine, follow these steps:
+To get EduBuddyAi up and running on your local machine, follow these steps:
 
 1.  **Clone the repository:**
 
