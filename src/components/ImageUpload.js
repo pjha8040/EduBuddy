@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { createWorker } from "tesseract.js";
+import Tesseract from "tesseract.js";
 
 function ImageUpload({ onSend }) {
   const [image, setImage] = useState(null);
@@ -15,20 +15,23 @@ function ImageUpload({ onSend }) {
     setIsProcessing(true);
     setText("");
 
-    const worker = await createWorker();
     try {
-      await worker.loadLanguage("eng");
-      await worker.initialize("eng");
       const {
-        data: { text },
-      } = await worker.recognize(file);
-      setText(text);
-      onSend(text);
+        data: { text: extractedText },
+      } = await Tesseract.recognize(file, "eng", {
+        logger: (m) => console.log(m), // Optional progress logger
+      });
+      const cleanedText = extractedText.trim();
+      if (cleanedText.length === 0) {
+        setText("No readable text found in the image.");
+      } else {
+        setText(cleanedText);
+        onSend(cleanedText);
+      }
     } catch (error) {
       console.error("OCR Error:", error);
       setText("Error during OCR. Please try again.");
     } finally {
-      await worker.terminate();
       setIsProcessing(false);
     }
   };
@@ -46,7 +49,7 @@ function ImageUpload({ onSend }) {
       {text && (
         <div className="mt-2">
           <h3 className="font-bold mb-1">Extracted Text:</h3>
-          <p className="text-gray-700">{text}</p>
+          <p className="text-gray-700 whitespace-pre-wrap">{text}</p>
         </div>
       )}
     </div>
