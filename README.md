@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# EduBuddy
 
-## Getting Started
+**A Local LLM-Powered AI Tutor for Children**
 
-First, run the development server:
+## Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+EduBuddy is an innovative educational platform designed to provide personalized learning experiences for children. Leveraging the power of local Large Language Models (LLMs), EduBuddy acts as an AI tutor, making learning accessible and engaging from anywhere. This project aims to democratize education by offering an intelligent, interactive, and private learning environment without relying on cloud-based AI services.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Personalized Learning:** Adapts to each child's learning pace and style.
+- **Interactive Tutoring:** Engages children with dynamic questions and explanations.
+- **Local LLM Integration:** Ensures privacy and offline accessibility by running AI models locally.
+- **User-Friendly Interface:** Designed for easy navigation by children and parents.
+- **Cross-Platform Accessibility:** Learn from various devices and environments.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technologies Used
 
-## Learn More
+- **Frontend:** Next.js, React, CSS Modules (or Tailwind CSS/Sass if used)
+- **Backend:** Node.js (for API routes in Next.js)
+- **AI/ML:** Local Large Language Models (e.g., Llama.cpp, Ollama, or similar frameworks for running LLMs locally)
+- **Other:** (Add any other specific libraries, databases, or tools used)
 
-To learn more about Next.js, take a look at the following resources:
+## Setup and Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To get EduBuddy up and running on your local machine, follow these steps:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1.  **Clone the repository:**
 
-## Deploy on Vercel
+    ```bash
+    git clone https://github.com/your-username/edubuddy.git
+    cd edubuddy
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2.  **Install dependencies:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```bash
+    npm install
+    # or yarn install
+    ```
+
+3.  **Configure Local LLM:**
+
+    - (Instructions on how to download and set up the specific local LLM, e.g., Ollama, Llama.cpp, including model download and API endpoint configuration.)
+    - Ensure your local LLM server is running and accessible.
+
+4.  **Environment Variables:**
+    Create a `.env.local` file in the root directory and add necessary environment variables (e.g., API endpoints for the local LLM).
+
+    ```
+    # Example:
+    NEXT_PUBLIC_LOCAL_LLM_API_URL=http://localhost:11434/api/generate
+    ```
+
+5.  **Run the development server:**
+
+    ```bash
+    npm run dev
+    # or yarn dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Usage
+
+Once the application is running, children can interact with the AI tutor through the intuitive interface. They can ask questions, receive explanations, and engage in learning activities powered by the local LLM.
+
+## Contributing
+
+We welcome contributions to EduBuddy! If you'd like to contribute, please follow these steps:
+
+1.  Fork the repository.
+2.  Create a new branch (`git checkout -b feature/your-feature-name`).
+3.  Make your changes.
+4.  Commit your changes (`git commit -m 'Add new feature'`).
+5.  Push to the branch (`git push origin feature/your-feature-name`).
+6.  Open a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
